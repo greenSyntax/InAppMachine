@@ -24,7 +24,7 @@ let inAppProductsId:[String] = ["BLAH", "BLAH", "BLAH"];
 inAppManager.configureInAppProducts(nameOfProducts: inAppProductsId)
 ```
 
-  3. Set Delegate to self 
+3. Set Delegate to self 
   
 ```swift
 inAppManager.delegate = self
