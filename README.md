@@ -11,12 +11,12 @@ Drag **InAppManger.swift** class, **InAppModel.swift** and **InAppTransaction.sw
 
 ## Usage
 1.  Instance InAppManager.swift
-	```
+	```swift
     let inAppManager = InAppManager.shared
     
     ```
 2.  Configure InAppManager with Product IDs 
-```
+```swift
 //InApp Product IDs
 let inAppProductsId:[String] = ["BLAH", "BLAH", "BLAH"];
 
@@ -26,16 +26,16 @@ inAppManager.configureInAppProducts(nameOfProducts: inAppProductsId)
 
   3. Set Delegate to self 
   
-```
+```swift
 inAppManager.delegate = self
 ```
 
 4.  Request for array of InApp Products
-```
+```swift
 inAppManager.requestForInAppProducts()
 ```
 5. And, Then you've two delegate methods
-```
+```swift
 func onSuccessInAppProductRequest(products:[InAppProduct]){
 	 // Array of InApp Product Model
 }
