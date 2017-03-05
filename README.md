@@ -38,11 +38,11 @@ inAppManager.requestForInAppProducts()
 
 ```swift
 func onSuccessInAppProductRequest(products:[InAppProduct]){
-	 // Array of InApp Product Model
+	// Array of InApp Product Model
 }
    
 func onFailInAppProductRequest(errorMessage:String?){ 
-	 //When App fails to load InApp products 
+	//When App fails to load InApp products 
 }
 ```
 
@@ -50,9 +50,26 @@ func onFailInAppProductRequest(errorMessage:String?){
 1. If you want to request for purchase. Then, you must have a product model object. 
 
 ```swift
+//Purcahse Product
+inAppManager.purchaseProduct(product: product.productInstance!)
 
 ```
 
+2. You have to adopt Delegate Methods for Transaction Status.
+ 
+ ```swift
+//MARK:- Step 4 : Handle Purcahse Delegates
+func onSuccessfulPurchaseInAppProduct(transaction:InAppTransaction){
+        
+    //Your Logic when Payment Transaction is Successfull :)
+}
+    
+func onFailedPurchaseInAppProduct(errorMessage error:String?){
+        
+    // Your Logic When Payemnt get Failed :(
+        
+}
+ ```
 
 ## Flow Diagram
 
