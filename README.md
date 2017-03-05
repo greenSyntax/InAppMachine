@@ -1,4 +1,5 @@
-InAppManager.swift
+
+[[https://github.com/greenSyntax/SwiftInAppManager/blob/master/ina_app_manager.png|alt=in_app_manager]]
 ===================
 
 InAppManager is wrapper class around **StoreKit** framework. It's a manager which performs InApp tasks. 
@@ -10,11 +11,12 @@ Drag **InAppManger.swift** class, **InAppModel.swift** and **InAppTransaction.sw
 
 
 ## Usage
-1.  Instance InAppManager.swift
-	```swift
-    let inAppManager = InAppManager.shared
-    
-    ```
+
+#### **Intialization**
+1. Instance InAppManager.swift
+```swift
+let inAppManager = InAppManager.shared    
+```
 2.  Configure InAppManager with Product IDs 
 ```swift
 //InApp Product IDs
@@ -22,19 +24,18 @@ let inAppProductsId:[String] = ["BLAH", "BLAH", "BLAH"];
 
 //Configure
 inAppManager.configureInAppProducts(nameOfProducts: inAppProductsId)
-```
 
-3. Set Delegate to self 
-  
-```swift
 inAppManager.delegate = self
 ```
 
-4.  Request for array of InApp Products
+#### **Request Products**
+1.  Request for array of InApp Products. In Response you will get an Array of Model Object which has *title*, *description* and *locale price* . 
+
 ```swift
 inAppManager.requestForInAppProducts()
 ```
-5. And, Then you've two delegate methods
+2. And, Then you've two delegate methods depending upon their Response Status.
+
 ```swift
 func onSuccessInAppProductRequest(products:[InAppProduct]){
 	 // Array of InApp Product Model
@@ -45,7 +46,17 @@ func onFailInAppProductRequest(errorMessage:String?){
 }
 ```
 
-## Contribution
+#### **Purcahse Product**
+1. If you want to request for purchase. Then, you must have a product model object. 
+
+```swift
+
+```
+
+
+## Flow Disgram
+
+[[https://github.com/greenSyntax/SwiftInAppManager/blob/master/swiftinappmanager.png|alt=inapp_manager_flow_diagram]]
 
 ##Liscence
 This project is under MIT Liscence. 
