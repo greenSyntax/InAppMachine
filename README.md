@@ -1,5 +1,5 @@
 
-[[https://github.com/greenSyntax/SwiftInAppManager/master/ina_app_manager.png|alt=in_app_manager]]
+![Image of InAppManagerHeader](https://github.com/greenSyntax/SwiftInAppManager/blob/master/ina_app_manager.png)
 ===================
 
 InAppManager is wrapper class around **StoreKit** framework. It's a manager which performs InApp tasks. 
@@ -56,7 +56,7 @@ func onFailInAppProductRequest(errorMessage:String?){
 
 ## Flow Disgram
 
-[[https://github.com/greenSyntax/SwiftInAppManager/master/InAppManger.swift.png|alt=flow_diagram]]
+![Image of Flow_Diagram](https://github.com/greenSyntax/SwiftInAppManager/blob/master/InAppManger.swift.png)
 
 ##Liscence
 This project is under MIT Liscence. 
