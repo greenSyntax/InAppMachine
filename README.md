@@ -13,11 +13,11 @@ Drag **InAppManger.swift** class, **InAppModel.swift** and **InAppTransaction.sw
 ## Usage
 
 #### **Intialization**
-1. Instance InAppManager.swift
++ Instance InAppManager.swift
 ```swift
 let inAppManager = InAppManager.shared    
 ```
-2.  Configure InAppManager with Product IDs 
++  Configure InAppManager with Product IDs 
 ```swift
 //InApp Product IDs
 let inAppProductsId:[String] = ["BLAH", "BLAH", "BLAH"];
@@ -29,12 +29,12 @@ inAppManager.delegate = self
 ```
 
 #### **Request Products**
-1.  Request for array of InApp Products. In Response you will get an Array of Model Object which has *title*, *description* and *locale price* . 
++ Request for array of InApp Products. In Response you will get an Array of Model Object which has *title*, *description* and *locale price* . 
 
 ```swift
 inAppManager.requestForInAppProducts()
 ```
-2. And, Then you've two delegate methods depending upon their Response Status.
++ And, Then you've two delegate methods depending upon their Response Status.
 
 ```swift
 func onSuccessInAppProductRequest(products:[InAppProduct]){
@@ -47,7 +47,7 @@ func onFailInAppProductRequest(errorMessage:String?){
 ```
 
 #### **Purcahse Product**
-1. If you want to request for purchase. Then, you must have a product model object. 
++ If you want to request for purchase. Then, you must have a product model object. 
 
 ```swift
 //Purcahse Product
@@ -55,7 +55,7 @@ inAppManager.purchaseProduct(product: product.productInstance!)
 
 ```
 
-2. You have to adopt Delegate Methods for Transaction Status.
++ You have to adopt Delegate Methods for Transaction Status.
  
  ```swift
 //MARK:- Step 4 : Handle Purcahse Delegates
