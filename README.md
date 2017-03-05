@@ -54,7 +54,7 @@ func onFailInAppProductRequest(errorMessage:String?){
 ```
 
 
-## Flow Disgram
+## Flow Diagram
 
 ![Image of Flow_Diagram](https://github.com/greenSyntax/SwiftInAppManager/blob/master/InAppManger.swift.png)
 
