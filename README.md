@@ -1,5 +1,5 @@
 
-![Image of InAppManagerHeader](https://github.com/greenSyntax/SwiftInAppManager/blob/master/ina_app_manager.png)
+![Image of InAppManagerHeader](https://github.com/greenSyntax/SwiftInAppManager/blob/master/in_App_header.png)
 ===================
 
 InAppManager is wrapper class around **StoreKit** framework. It's a manager which performs InApp tasks. 
