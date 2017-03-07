@@ -2,7 +2,7 @@
 ![Image of InAppManagerHeader](https://github.com/greenSyntax/SwiftInAppManager/blob/master/in_App_header.png)
 ===================
 
-Neither it's a mamomth project nor I'm clamimg it. Just a REST API for feedback Service.
+A Wrapper class InApp Purchase Operation (StoreKit.framework)
 
 ## Usage
 
