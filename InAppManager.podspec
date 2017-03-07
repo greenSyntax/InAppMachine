@@ -13,7 +13,7 @@ A Wrapper Class over StoreKit.framework for InApp Purchase operations. You can r
   s.source           = { :git => 'https://github.com/greenSyntax/InAppManager.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '9.0'
-  s.source_files = 'InAppManager/Classes/InAppManager.swift'
+  s.source_files = 'InAppManager/Classes/**/*'
 
   s.pod_target_xcconfig =  {
   'SWIFT_VERSION' => '3.0',
