@@ -2,12 +2,47 @@
 ![Image of InAppManagerHeader](https://github.com/greenSyntax/SwiftInAppManager/blob/master/in_App_header.png)
 ===================
 
-InAppManager is wrapper class around **StoreKit** framework. It's a manager which performs InApp tasks. 
-Sounds boring  :confused: , but mark my words 
-> InAppManager 'll layer down your StoreKit codes.
+Neither it's a mamomth project nor I'm clamimg it. Just a REST API for feedback Service.
 
-## Installation
-Drag **InAppManger.swift** class, **InAppModel.swift** and **InAppTransaction.swift**  model class in your project.
+## Header 
+Every API Request has this as a Header.
+```
+Content-type:application/json
+```
+
+## Ednpoints
+#### [GET] /feedbacks
+
+It's a DISPLAY API 
+
+```
+http://[BASEURL]/feedbackApp/feedbacks
+```
+#### Response
+JSON would be like this, when your request for /feedback API.
+
+```json
+{
+    "response_code": 200,
+    "response_status": "OK",
+    "response_data": [
+        {
+            "feedback_id": "34",
+            "user_name": "nikx",
+            "feedback_text": "Hi This is Nikhil. And, &lt;\/html&gt;Im Working in InnovationM",
+            "user_mail": "NULL",
+            "time_stamp": "2017-03-07 06:53:24",
+            "processing_status": "0",
+            "user_ip": null,
+            "os_type": null,
+            "user_device": null
+        }
+    ]
+}	
+```
+
+
+
 
 
 ## Usage
