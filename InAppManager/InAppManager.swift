@@ -9,6 +9,32 @@
 import UIKit
 import StoreKit
 
+struct InAppProduct {
+    
+    var productInstance:SKProduct?
+    var productId:String?
+    var productTitle:String?
+    var productDescription:String?
+    var productLocale:Locale?
+    var productPrice:NSDecimalNumber?
+}
+
+struct InAppTransaction {
+    
+    var transactionDate:Date?
+    var transactionIdentifier:String?
+}
+
+class Receipt{
+    
+    var isTrail:Bool?
+    var purchaseDate:String?
+    var transactionIdentifer:String?
+    var productId:String?
+    var quantity:Int?
+    var purchaseTimestampInMs:String?
+}
+
 protocol InAppManagerDelegate : class {
     
     //Product Request Callbacks
