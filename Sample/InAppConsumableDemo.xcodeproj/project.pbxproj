@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		071D66D11E55F597005AD179 /* PurchaseReciptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D66D01E55F597005AD179 /* PurchaseReciptsTableViewController.swift */; };
-		071D66D31E563486005AD179 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D66D21E563486005AD179 /* Receipt.swift */; };
 		0721DF611E5EAEB900B64219 /* InAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721DF5E1E5EAEB900B64219 /* InAppManager.swift */; };
 		0721DF621E5EAEB900B64219 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721DF601E5EAEB900B64219 /* WebServiceManager.swift */; };
 		075A64BD1DFC00FD00DBD49B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A64BC1DFC00FD00DBD49B /* AppDelegate.swift */; };
@@ -20,10 +19,8 @@
 		075A64EC1DFC01FC00DBD49B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075A64EB1DFC01FC00DBD49B /* StoreKit.framework */; };
 		075A64F61DFC05B200DBD49B /* InAppListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A64F51DFC05B200DBD49B /* InAppListViewControllerTableViewController.swift */; };
 		075A64F81DFC05D800DBD49B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A64F71DFC05D800DBD49B /* HomeViewController.swift */; };
-		075A64FA1DFC05FA00DBD49B /* InAppProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A64F91DFC05FA00DBD49B /* InAppProduct.swift */; };
 		075A64FF1DFC06E400DBD49B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A64FE1DFC06E400DBD49B /* Utility.swift */; };
 		075A65021DFC0AD800DBD49B /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A65011DFC0AD800DBD49B /* ViewControllerExtension.swift */; };
-		07858C371E057DE90082EDAD /* InAppTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07858C361E057DE90082EDAD /* InAppTransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		071D66D01E55F597005AD179 /* PurchaseReciptsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseReciptsTableViewController.swift; sourceTree = "<group>"; };
-		071D66D21E563486005AD179 /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		0721DF5E1E5EAEB900B64219 /* InAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppManager.swift; sourceTree = "<group>"; };
 		0721DF601E5EAEB900B64219 /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		075A64B91DFC00FD00DBD49B /* InAppConsumableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppConsumableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,10 +59,8 @@
 		075A64EB1DFC01FC00DBD49B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		075A64F51DFC05B200DBD49B /* InAppListViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		075A64F71DFC05D800DBD49B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		075A64F91DFC05FA00DBD49B /* InAppProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppProduct.swift; sourceTree = "<group>"; };
 		075A64FE1DFC06E400DBD49B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		075A65011DFC0AD800DBD49B /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		07858C361E057DE90082EDAD /* InAppTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppTransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +177,6 @@
 		075A64EE1DFC04F500DBD49B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				075A64F91DFC05FA00DBD49B /* InAppProduct.swift */,
-				07858C361E057DE90082EDAD /* InAppTransaction.swift */,
-				071D66D21E563486005AD179 /* Receipt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,11 +366,8 @@
 				071D66D11E55F597005AD179 /* PurchaseReciptsTableViewController.swift in Sources */,
 				075A65021DFC0AD800DBD49B /* ViewControllerExtension.swift in Sources */,
 				0721DF611E5EAEB900B64219 /* InAppManager.swift in Sources */,
-				071D66D31E563486005AD179 /* Receipt.swift in Sources */,
 				075A64FF1DFC06E400DBD49B /* Utility.swift in Sources */,
-				075A64FA1DFC05FA00DBD49B /* InAppProduct.swift in Sources */,
 				075A64F81DFC05D800DBD49B /* HomeViewController.swift in Sources */,
-				07858C371E057DE90082EDAD /* InAppTransaction.swift in Sources */,
 				0721DF621E5EAEB900B64219 /* WebServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
