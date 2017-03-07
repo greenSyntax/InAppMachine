@@ -2,7 +2,7 @@
 ![Image of InAppManagerHeader](https://github.com/greenSyntax/SwiftInAppManager/blob/master/in_App_header.png)
 ===================
 
-A Wrapper class InApp Purchase Operation (StoreKit.framework)
+A Wrapper class around InApp Purchase Operation (StoreKit.framework)
 
 ## Usage
 
