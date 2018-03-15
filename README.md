@@ -7,9 +7,16 @@
 
 ## Features
 
+- [x] Request for InApp Products
+- [x] Pay for InApp Product
+- [ ] Restore Already Purchased Product
+- [ ] Fetch Past Purchase History
+
+
 ## Steup InApp Products in iTunes
 
-## Requirements
+1. Login to yout **iTunes Connect Account**
+2. Create/ Select your App for which you want to register InApp Product. 
 
 ## Installation
 
@@ -66,7 +73,7 @@ inAppManager.purchaseProduct(product: product.productInstance!, onSuccess: { (tr
 
 [Abhishek Kumar Ravi](https://greensyntax.co.in)
 
-(ab.abhishek.ravi@gmail.com)[mailto:ab.abhishek.ravi@gmail.com]
+ab.abhishek.ravi@gmail.com
 
 ## License
 
