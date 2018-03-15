@@ -16,7 +16,7 @@
 ## Steup InApp Products in iTunes
 
 1. Login to yout **iTunes Connect Account**
-2. Create/ Select your App for which you want to register InApp Product. 
+2. Create/ Select your App for which you want to register InApp Product.
 
 ## Installation
 
@@ -72,8 +72,6 @@ inAppManager.purchaseProduct(product: product.productInstance!, onSuccess: { (tr
 ## Contributors
 
 [Abhishek Kumar Ravi](https://greensyntax.co.in)
-
-ab.abhishek.ravi@gmail.com
 
 ## License
 
