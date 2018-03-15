@@ -1,0 +1,22 @@
+{
+  "name": "InAppManager",
+  "version": "0.1.0",
+  "summary": "A short description of InAppManager.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/greenSyntax/InAppManager",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "greenSyntax": "ab.abhishek.ravi@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/greenSyntax/InAppManager.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "InAppManager/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - InAppManager (0.1.0)
+
+DEPENDENCIES:
+  - InAppManager (from `../`)
+
+EXTERNAL SOURCES:
+  InAppManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  InAppManager: 64e7ca4096401e5b7cc1963e4d5db0186b825ddb
+
+PODFILE CHECKSUM: ab23aef4360ec56f886f16fbfcbfdd6ca5d9ceed
+
+COCOAPODS: 1.4.0
