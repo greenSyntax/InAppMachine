@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'InAppManager_Example' do
+  pod 'InAppManager', :path => '../'
+
+  target 'InAppManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
