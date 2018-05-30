@@ -10,8 +10,8 @@
 ## Features 
 
 **v1.1.0**
--[*] Closure based API for InApp Purcahse
--[*] Request , Purchase and Restore InApp Products
+- Closure based API for InApp Purcahse
+- Request , Purchase and Restore InApp Products
 
 ## Installation
 
