@@ -1,0 +1,6 @@
+framework module InAppMachine {
+  umbrella header "InAppMachine-umbrella.h"
+
+  export *
+  module * { export * }
+}

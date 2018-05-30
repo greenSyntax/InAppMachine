@@ -1,6 +1,0 @@
-framework module InAppManager {
-  umbrella header "InAppManager-umbrella.h"
-
-  export *
-  module * { export * }
-}

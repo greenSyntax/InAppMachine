@@ -1,5 +1,5 @@
 import XCTest
-import InAppManager
+import InAppMachine
 
 class Tests: XCTestCase {
     

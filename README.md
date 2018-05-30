@@ -1,78 +1,147 @@
-# InAppManager
+# InAppMachine
 
-[![CI Status](http://img.shields.io/travis/greenSyntax/InAppManager.svg?style=flat)](https://travis-ci.org/greenSyntax/InAppManager)
-[![Version](https://img.shields.io/cocoapods/v/InAppManager.svg?style=flat)](http://cocoapods.org/pods/InAppManager)
-[![License](https://img.shields.io/cocoapods/l/InAppManager.svg?style=flat)](http://cocoapods.org/pods/InAppManager)
-[![Platform](https://img.shields.io/cocoapods/p/InAppManager.svg?style=flat)](http://cocoapods.org/pods/InAppManager)
+[![CI Status](https://img.shields.io/travis/greenSyntax/InAppMachine.svg?style=flat)](https://travis-ci.org/greenSyntax/InAppMachine)
+[![Version](https://img.shields.io/cocoapods/v/InAppMachine.svg?style=flat)](https://cocoapods.org/pods/InAppMachine)
+[![License](https://img.shields.io/cocoapods/l/InAppMachine.svg?style=flat)](https://cocoapods.org/pods/InAppMachine)
+[![Platform](https://img.shields.io/cocoapods/p/InAppMachine.svg?style=flat)](https://cocoapods.org/pods/InAppMachine)
 
-## Features
+#### A Easy Wrapper Over StoreKit framework.
 
-- [x] Request for InApp Products
-- [x] Pay for InApp Product
-- [ ] Restore Already Purchased Product
-- [ ] Fetch Past Purchase History
+## Features 
 
-
-## Steup InApp Products in iTunes
-
-1. Login to yout **iTunes Connect Account**
-2. Create/ Select your App for which you want to register InApp Product.
+**v1.1.0**
+[*] Closure based API for InApp Purcahse
+[*] Request , Purchase and Restore InApp Products
 
 ## Installation
 
-InAppManager is available through [CocoaPods](http://cocoapods.org). To install
+InAppMachine is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'InAppManager'
+pod 'InAppMachine'
 ```
+## Create on iTunes Connect
 
-## Code
+**Step1.**
+Login to your iTunes  Account.
 
-#### **Initialize Products**
-+ I'm assuming you have InApp Products Identifier with you,
+**Step2.**
+Switch to 'My Apps' and open your app.
+
+**Step3.**
+Go to 'Features' section of the app and create InApp Product.
+
+[Incomplete]
+
+
+## Intialize InAppMachine
+
+**Step1:** 
+InAppMachine follows singleton, so first you shoud access its singleton object rather than creating one,
 
 ```swift
-let products = ["com.greenstore.silverPlan" , "com.greenstore.goldPlan", "com.greenstore.platinumPlan"]
-```
 
-#### **Request Products**
-+ Request for array of InApp Products. In Response you will get an Array of Model Object which has *title*, *description* and *locale price* .
+import UIKit
+import InAppMachine
 
-```swift
-inAppManager.requestForInAppProducts(products: { (products) in
+class ViewController: UIViewController {
 
-// List of InApp Products
-print(products)
+// Add This One
+let inappMachine = InAppMachine.shared
 
-}) { (error) in
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
 
-// Error while getting Products
 }
-```
-
-#### **Purcahse Product**
-+ If you want to request for purchase. Then, you must have a product model object.
-
-```swift
-//Purcahse Product
-inAppManager.purchaseProduct(product: product.productInstance!, onSuccess: { (transaction) in
-
-//onSuccessfull transaction
-
-}) { (error) in
-
-//onError
-
+    
 }
 
 ```
 
+**Step2:**
 
-## Contributors
+Now, You have to tell InAppMachine about the Product ID(s) which you have made on iTunes connect.
+Say, you have created a consumable product named 'co.in.greensyntax.restman.developer.program'
+
+So, you have to adopt 'InAppPurchaseSource' protocol and satisfy the stubs (i.e. products).
+
+```swift
+
+import UIKit
+import InAppMachine
+
+class ViewController: UIViewController, InAppPurchaseSource {
+
+// Change as per your ProductID
+var products: [String] = ["co.in.greensyntax.restman.developer.program"]
+
+let inappMachine = InAppMachine.shared
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+
+    // Next, I have set the dataSource with the instance of my object.
+    inappMachine.dataSource = self
+}
+
+}
+```
+
+## Request Products
+
+**Step3:**
+Now, we'll check wheather our ProductID are valid or not. So, we'll call the request method for checking the validity of product.
+
+```swift
+
+inappMachine.requestFor(inAppProducts: { (products) in
+    
+    //onSuccess
+    for product in products {
+    
+        // Valid Product Deatils
+        print(product.description)
+    }
+}) { (error) in
+    
+    //onError you'll get an error of type InAppError
+    print(error?.localizedText)
+}
+
+```
+With these details, you can prepare your Purchase View where you can show Products Details.
+
+## Purchase 
+
+**Step4:**
+
+And, On Purchase affirmation, you can initiate purchase event with valid Product object. 
+For purchasing, you need an instance of 'InAppProduct' which you got on InApp request call (step3). 
+
+```swift
+
+self.inappMachine.purcahseFor(product: product, onSuccess: { (transaction: InAppTransaction) in
+
+    //onSuccessfull Transaction
+    print(transaction.description)
+
+}, onFailed: { (error) in
+
+    //onFailed Transaction
+    print(error)
+})
+
+```
+
+## Restore
+
+## Contributor 
 
 [Abhishek Kumar Ravi](https://greensyntax.co.in)
 
 ## License
 
-InAppManager is available under the MIT license. See the LICENSE file for more info.
+InAppMachine is available under the MIT license. See the LICENSE file for more info.

@@ -1,16 +1,23 @@
 PODS:
-  - InAppManager (0.1.0)
+  - InAppMachine (1.1.1)
+  - SwiftLint (0.25.1)
 
 DEPENDENCIES:
-  - InAppManager (from `../`)
+  - InAppMachine (from `../`)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SwiftLint
 
 EXTERNAL SOURCES:
-  InAppManager:
-    :path: ../
+  InAppMachine:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  InAppManager: 64e7ca4096401e5b7cc1963e4d5db0186b825ddb
+  InAppMachine: cb7840e5b32687d18ae482a8610f785206f6e68c
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
-PODFILE CHECKSUM: ab23aef4360ec56f886f16fbfcbfdd6ca5d9ceed
+PODFILE CHECKSUM: 537fac73c204a1bec82baf91b65399e980feb81c
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

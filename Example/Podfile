@@ -1,11 +1,7 @@
 use_frameworks!
 
-target 'InAppManager_Example' do
-  pod 'InAppManager', :path => '../'
+target 'InAppMachine_Example' do
+  pod 'InAppMachine', :path => '../'
+  pod 'SwiftLint'
 
-  target 'InAppManager_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
