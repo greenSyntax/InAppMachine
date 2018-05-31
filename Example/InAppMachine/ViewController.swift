@@ -21,6 +21,9 @@ class ViewController: UIViewController, InAppPurchaseSource {
         
         inappMachine.dataSource = self
         requestForProducts()
+        
+        // Get Recipts Data to Validate the Purchase
+        let recipts = inappMachine.getReciptData()
     }
 
     func requestForProducts() {

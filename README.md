@@ -5,13 +5,18 @@
 [![License](https://img.shields.io/cocoapods/l/InAppMachine.svg?style=flat)](https://cocoapods.org/pods/InAppMachine)
 [![Platform](https://img.shields.io/cocoapods/p/InAppMachine.svg?style=flat)](https://cocoapods.org/pods/InAppMachine)
 
-#### A Easy Wrapper Over StoreKit framework.
+#### A Easy Wrapper Around StoreKit framework for iOS. 
 
 ## Features 
 
+**v1.1.1**
+- Updated Documentation
+- Restore InApp Purchase
+- Get Recipts for InApp Purcahse
+
 **v1.1.0**
 - Closure based API for InApp Purcahse
-- Request , Purchase and Restore InApp Products
+- Request and Purchase  InApp Products
 
 ## Installation
 
@@ -47,14 +52,14 @@ import InAppMachine
 
 class ViewController: UIViewController {
 
-// Add This One
-let inappMachine = InAppMachine.shared
+    // Add This One
+    let inappMachine = InAppMachine.shared
 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
 
-}
+    }
     
 }
 
@@ -79,13 +84,12 @@ var products: [String] = ["co.in.greensyntax.restman.developer.program"]
 
 let inappMachine = InAppMachine.shared
 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-
-    // Next, I have set the dataSource with the instance of my object.
-    inappMachine.dataSource = self
-}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        // Next, I have set the dataSource with the instance of my object.
+        inappMachine.dataSource = self
+    }
 
 }
 ```
@@ -137,6 +141,19 @@ self.inappMachine.purcahseFor(product: product, onSuccess: { (transaction: InApp
 ```
 
 ## Restore
+
+
+## Recipts
+
+Recipts Validation is usally done to validate the purchase, wheather it's a genuine purchase or not. Say, You have purcahse a InApp product and notifed the your App Server via API that you have purchase this subscription. Now, it's alway a good idea to validate every purchase using reciopts. 
+
+```swift 
+
+// Get Recipts Data to Validate the Purchase
+let recipts = inappMachine.getReciptData()
+
+```
+
 
 ## Contributor 
 

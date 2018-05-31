@@ -13,7 +13,7 @@ extension InAppMachine {
     /// Method returns the Receit Data from your App Bundle.
     ///
     /// - Returns: Encrpted form of String
-    static func getReciptData()->String?{
+    public func getReciptData()->String?{
 
         if let reciptUrl = Bundle.main.appStoreReceiptURL{
             let receiptData = try? Data(contentsOf: reciptUrl)

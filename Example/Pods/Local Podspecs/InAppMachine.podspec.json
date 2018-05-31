@@ -9,12 +9,13 @@
     "file": "LICENSE"
   },
   "authors": {
-    "greenSyntax": "abhishek.ravi@thoughts2binary.com"
+    "Abhishek Kumar Ravi": "ab.abhishek.ravi@gmail.com"
   },
   "source": {
     "git": "https://github.com/greenSyntax/InAppMachine.git",
     "tag": "1.1.1"
   },
+  "social_media_url": "https://twitter.com/greenSyntax",
   "platforms": {
     "ios": "8.0"
   },
