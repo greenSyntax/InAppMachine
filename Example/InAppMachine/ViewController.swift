@@ -11,7 +11,9 @@ import InAppMachine
 
 class ViewController: UIViewController, InAppPurchaseSource {
     
-    var products: [String] = ["co.in.greensyntax.restman.developer.program"]
+    //"co.in.greensyntax.restman.developer.program",
+    
+    var products: [String] = ["co.in.greensyntax.restman.plan.enterprise"]
 
     let inappMachine = InAppMachine.shared
     
