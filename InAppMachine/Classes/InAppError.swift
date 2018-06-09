@@ -14,6 +14,7 @@ public enum InAppError: Error{
     case deviceNotCapableForInAppPayment
     case errorWhilePurchase
     case declareProductID
+    case failedWhileRestoring
 
     public var localizedText: String {
 
@@ -33,6 +34,10 @@ public enum InAppError: Error{
             
         case .declareProductID:
             return "You have to set dataSource property of InAppManager. \n Developer Note: Adopt InAppPurchaseSource protocol :/"
+            
+        case failedWhileRestoring:
+            return "Failed while restoring "
+            
         }
     }
 }

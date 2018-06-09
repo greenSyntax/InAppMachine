@@ -24,29 +24,45 @@ class ViewController: UIViewController, InAppPurchaseSource {
         inappMachine.dataSource = self
         requestForProducts()
         
-        // Get Recipts Data to Validate the Purchase
-        let recipts = inappMachine.getReciptData()
     }
-
+    func purchaseProduct(product: InAppProduct) {
+        
+        self.inappMachine.purcahseFor(product: product, onSuccess: { (transaction: InAppTransaction) in
+            
+            print(transaction.description)
+            
+        }, onFailed: { (error) in
+            
+            print(error)
+        })
+    }
+    
+    
+    func restoreProduct(product: InAppProduct) {
+        
+    }
+    
     func requestForProducts() {
         inappMachine.requestFor(inAppProducts: { (products) in
             
             for product in products {
                 
                 print(product.description)
-                self.inappMachine.purcahseFor(product: product, onSuccess: { (transaction: InAppTransaction) in
-                    
-                    print(transaction.description)
-                    
-                }, onFailed: { (error) in
-                    
-                    print(error)
-                })
+                
+                // Purchase Product
+                self.purchaseProduct(product: product)
             }
         }) { (error) in
             
             print(error?.localizedText)
         }
+    }
+    
+    func getRecipts() {
+        
+        // Get Recipts Data to Validate the Purchase
+        let recipts = inappMachine.getReciptData()
+        
     }
     
     override func didReceiveMemoryWarning() {

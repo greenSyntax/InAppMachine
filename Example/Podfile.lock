@@ -1,5 +1,5 @@
 PODS:
-  - InAppMachine (1.1.1)
+  - InAppMachine (1.1.2)
   - SwiftLint (0.25.1)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InAppMachine: 060352478693c13ff6e3a2b2846921ba87bfc772
+  InAppMachine: 6c2ff477a3bdfe688ddf0f94f618810e1e08b967
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
 PODFILE CHECKSUM: 537fac73c204a1bec82baf91b65399e980feb81c

@@ -16,12 +16,26 @@ public class InAppMachine: NSObject {
     fileprivate var errorClosure:((InAppError)->Void)?
     fileprivate var paymentSuccessClosure:((InAppTransaction)->Void)?
     fileprivate var paymentFailedClosure:((InAppError)->Void)?
+    fileprivate var restoreSuccessClosure:((Bool)->Void)?
+    fileprivate var restoreFailureClosure:((InAppError)->Void)?
+    
 
     public static let shared = InAppMachine()
     private override init(){}
 
     fileprivate func prepareTransactionReceipt(transaction: SKPaymentTransaction) -> InAppTransaction {
         return InAppTransaction(transactionDate: transaction.transactionDate ?? Date(), transactionIdentifier: transaction.transactionIdentifier ?? "")
+    }
+    
+    fileprivate func handleRestoreClosure() {
+        
+    }
+    
+    fileprivate func handleRestoreFailureClosure() {
+        
+        if let handler = restoreFailureClosure {
+            handler(InAppError.NoProducts)
+        }
     }
     
     /// This Method request InApp Products from iTunes attached to the Bundle.
@@ -55,6 +69,12 @@ public class InAppMachine: NSObject {
         }
     }
 
+    public func restoreProduct(forInAppProduct product: InAppProduct, onSuccess: (InAppTransaction) -> (), onFailure: (InAppError) -> ()) {
+        
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
     /// Purchase Product
     ///
     /// - Parameter requestProduct: InAppProduct Model
@@ -162,29 +182,31 @@ extension InAppMachine: SKPaymentTransactionObserver {
             switch transaction.transactionState {
 
             case .purchasing:
-                print("InApp: Purchasing ...")
+                print("InAppMachine: Purchasing ...")
                 break
 
             case .purchased:
-                print("InApp: Successfully Purachsed")
+                print("InAppMachine: Successfully Purachsed")
                 SKPaymentQueue.default().finishTransaction(transaction)
 
                 purchasedProduct(transaction: transaction)
                 break
 
             case .restored:
-                print("InApp: Restored ...")
+                print("InAppMachine: Restored ...")
+                
+                
                 break
 
             case .failed:
-                print("InApp: Purchased Failed")
+                print("InAppMachine: Purchased Failed")
                 SKPaymentQueue.default().finishTransaction(transaction)
                 
                 failedPurchase(transaction: transaction)
                 break
 
             case .deferred:
-                print("InApp: Deffered ...")
+                print("InAppMachine: Deffered ...")
                 return
             }
         }

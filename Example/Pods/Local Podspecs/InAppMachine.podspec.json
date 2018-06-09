@@ -1,6 +1,6 @@
 {
   "name": "InAppMachine",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "summary": "InAppMachine with ligh installation",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/greenSyntax/InAppMachine",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/greenSyntax/InAppMachine.git",
-    "tag": "1.1.1"
+    "tag": "1.1.2"
   },
   "social_media_url": "https://twitter.com/greenSyntax",
   "platforms": {
